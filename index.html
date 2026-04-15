@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto</title>
+  <link rel="stylesheet" href="auto.css">
+</head>
+
+<body id="auto_sales_page">
+  <div id="auto_sales_container">
+    <header id="auto_sales_header">
+      <div id="live_dashboard_badge">Live Dashboard</div>
+      <h1 id="auto_sales_heading">AUTO SALES COUNTER</h1>
+      <p id="auto_sales_subtitle">Live Store Sales Simulation</p>
+    </header>
+
+    <main id="auto_sales_dashboard">
+      <section id="sales_overview_panel">
+        <h2 id="sales_overview_heading">Sales Overview</h2>
+        <div id="sales_stats_grid">
+          <article id="total_sales_card" class="sales_stat_card">
+            <span class="sales_stat_label">Total Sales</span>
+            <strong id="total_sales_value" class="sales_stat_value">0</strong>
+          </article>
+          <article id="items_sold_card" class="sales_stat_card">
+            <span class="sales_stat_label">Items Sold</span>
+            <strong id="items_sold_value" class="sales_stat_value">0</strong>
+          </article>
+          <article id="revenue_card" class="sales_stat_card">
+            <span class="sales_stat_label">Revenue ($)</span>
+            <strong id="revenue_value" class="sales_stat_value">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="sales_controls_panel">
+        <h2 id="sales_controls_heading">Controls</h2>
+        <div id="sales_controls_row">
+          <button id="start_auto_button" type="button">Start Auto</button>
+          <button id="stop_button" type="button">Stop</button>
+          <button id="reset_button" type="button">Reset</button>
+        </div>
+      </section>
+
+      <section id="products_list_panel">
+        <h2 id="products_list_heading">Products List</h2>
+        <ul id="products_list"></ul>
+      </section>
+
+      <section id="live_sales_graph_panel">
+        <h2 id="live_sales_graph_heading">Live Sales Graph</h2>
+        <div id="live_sales_graph_placeholder" aria-hidden="true">
+          <span id="graph_bar_1" class="graph_bar"></span>
+          <span id="graph_bar_2" class="graph_bar"></span>
+          <span id="graph_bar_3" class="graph_bar"></span>
+          <span id="graph_bar_4" class="graph_bar"></span>
+          <span id="graph_bar_5" class="graph_bar"></span>
+        </div>
+      </section>
+
+      <section id="recent_sales_log_panel">
+        <h2 id="recent_sales_log_heading">Recent Sales Log</h2>
+        <ul id="recent_sales_log_list"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="auto.js"></script>
+</body>
+
+</html>
