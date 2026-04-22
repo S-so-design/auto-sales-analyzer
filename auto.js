@@ -9,6 +9,8 @@ const productList = document.querySelector("#products_list")
 let intervalId = null
 
 startButton.addEventListener("click", function () {
+  const cars = ["Toyota Camry", "Honda Civic", "Ford Mustang", "Tesla Model 3", "Chevrolet Corvette"]
+
   let final_sale = []
   let items = []
   let cost1 = []
@@ -20,14 +22,21 @@ startButton.addEventListener("click", function () {
   }
 
   let index = 0
+  let growingList = ""   // this will accumulate items
 
-  // Clear any previous interval
   clearInterval(intervalId)
 
   intervalId = setInterval(() => {
     totalSales.innerText = final_sale[index]
     itemSold.innerText = items[index]
     cost.innerText = cost1[index]
+
+    // Add the next car to the growing list
+    growingList += `<li>${cars[index]}</li>`
+
+    // Update the list in the DOM
+    productList.innerHTML = `<ul>${growingList}</ul>`
+
     index++
 
     if (index >= final_sale.length) {
@@ -35,16 +44,3 @@ startButton.addEventListener("click", function () {
     }
   }, 3000)
 })
-
-resetButton.addEventListener("click", function () {
-  totalSales.innerText = 0
-  itemSold.innerText = 0
-  cost.innerText = 0
-})
-
-stopButton.addEventListener("click", function () {
-  clearInterval(intervalId)
-})
-
-
-
